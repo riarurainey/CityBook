@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class CSVParser {
-    public void readCitiesFromCSV(String fileName) {
+    public void readCitiesFromCSV(String fileName, CityBook cityBook) {
 
         Path path = Paths.get(fileName);
 
@@ -16,7 +16,7 @@ public class CSVParser {
             while (scanner.hasNext()) {
                 String line = scanner.nextLine().replaceAll(";", "; ");
                 String[] attributes = line.split(";");
-                CityBook.createCity(attributes);
+                cityBook.createCity(attributes);
             }
 
         } catch (IOException e) {

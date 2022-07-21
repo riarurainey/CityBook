@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CityBook {
-    static List<City> cities = new ArrayList<>();
+    private List<City> cities = new ArrayList<>();
 
-    public static void createCity(String[] attributes) {
+    public void createCity(String[] attributes) {
         String name = validateFields(attributes[1]);
         String region = validateFields(attributes[2]);
         String district = validateFields(attributes[3]);
@@ -24,14 +24,20 @@ public class CityBook {
         addToBook(city);
     }
 
-    private static void addToBook(City city) {
+    private void addToBook(City city) {
         cities.add(city);
     }
 
     public void printCityBook() {
-        for (City city : cities) {
-            System.out.println(city);
-        }
+        cities.forEach(System.out::println);
+    }
+
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
     }
 
     private static String validateFields(String field) {

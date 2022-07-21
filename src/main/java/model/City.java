@@ -15,6 +15,26 @@ public class City {
         this.foundation = foundation;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public Long getPopulation() {
+        return population;
+    }
+
+    public String getFoundation() {
+        return foundation;
+    }
+
     public static class Builder {
         private String name;
         private String region;
