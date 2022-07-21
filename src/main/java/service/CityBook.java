@@ -40,11 +40,11 @@ public class CityBook {
         this.cities = cities;
     }
 
-    private static String validateFields(String field) {
+    private String validateFields(String field) {
         return field.trim().isEmpty() ? null : field.trim();
     }
 
-    private static Long parseLongSafe(String field) {
+    private Long parseLongSafe(String field) {
         try {
             return Long.parseLong(field);
         } catch (NumberFormatException e) {
