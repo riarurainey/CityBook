@@ -1,6 +1,6 @@
 import service.CityBook;
 import util.CSVParser;
-import util.Search;
+import util.Grouping;
 
 
 public class Main {
@@ -8,8 +8,7 @@ public class Main {
         CityBook cityBook = new CityBook();
         CSVParser csvParser = new CSVParser();
         csvParser.readCitiesFromCSV("src/main/resources/city_ru.csv", cityBook);
-        Search search = new Search();
-        search.printIndexAndValueOfMax(cityBook.getCities());
+        Grouping.byRegion(cityBook.getCities());
 
     }
 }

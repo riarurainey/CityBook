@@ -19,6 +19,5 @@ public class Sort {
                 .sorted(Comparator.comparing(City::getDistrict)
                         .thenComparing(City::getName))
                 .collect(Collectors.toList());
-
     }
 }

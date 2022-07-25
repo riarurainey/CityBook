@@ -24,6 +24,7 @@ public class CityBook {
         addToBook(city);
     }
 
+
     private void addToBook(City city) {
         cities.add(city);
     }
