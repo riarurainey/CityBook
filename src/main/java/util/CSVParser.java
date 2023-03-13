@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class CSVParser {
+    
     public void readCitiesFromCSV(String fileName, CityBook cityBook) {
 
         Path path = Paths.get(fileName);
