@@ -52,6 +52,5 @@ public class CityBook {
         } catch (NumberFormatException e) {
             return null;
         }
-    }
-    
+    }   
 }
