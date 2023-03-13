@@ -6,7 +6,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Grouping {
+public final class Grouping {
+
+    private Grouping() {
+
+    }
 
     public static void byRegion(List<City> cities) {
         Map<String, Long> map = cities.stream().collect(
@@ -15,3 +19,4 @@ public class Grouping {
 
     }
 }
+
