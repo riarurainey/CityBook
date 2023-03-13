@@ -4,10 +4,11 @@ import model.City;
 
 import java.util.List;
 
-public class Search {
-    private City[] array;
+public final class Search {
 
-    private int findIndexOfMax(List<City> cities) {
+    private static City[] array;
+
+    private static int findIndexOfMax(List<City> cities) {
         array = fromListToArray(cities);
 
         int indexOfMax = 0;
@@ -21,13 +22,13 @@ public class Search {
         return indexOfMax;
     }
 
-    private City[] fromListToArray(List<City> cities) {
+    private static City[] fromListToArray(List<City> cities) {
         array = new City[cities.size()];
         cities.toArray(array);
         return array;
     }
 
-    public void printIndexAndValueOfMax(List<City> cities) {
+    public static void printIndexAndValueOfMax(List<City> cities) {
         if (!(cities == null || cities.isEmpty())) {
             int indexOfMax = findIndexOfMax(cities);
             System.out.println("[" + indexOfMax + "]" + " = " + array[indexOfMax].getPopulation());
