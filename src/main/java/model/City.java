@@ -1,6 +1,7 @@
 package model;
 
 public class City {
+    
     private final String name;
     private final String region;
     private final String district;
