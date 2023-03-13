@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CityBook {
+    
     private List<City> cities = new ArrayList<>();
 
     public void createCity(String[] attributes) {
@@ -52,4 +53,5 @@ public class CityBook {
             return null;
         }
     }
+    
 }
